@@ -39,6 +39,12 @@ public class LinkedList<T> {
         }
     }
 
+    public void insert(T data) {
+        Node<T> node = new Node<>(data);
+        head.next = node;
+        node.next = tail;
+    }
+
     public void display() {
         Node<T> temp = head;
         while (temp != null) {
