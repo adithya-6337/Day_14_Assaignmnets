@@ -61,7 +61,15 @@ public class LinkedList<T> {
         temp = tail;
         return deletedLastElement;
     }
-
+    public Node<T> search(T searchData) {
+        Node<T> temp = head;
+        while(temp != null){
+            if(temp.data.equals(searchData))
+                return temp;
+            temp = temp.next;
+        }
+        return null;
+    }
     public void display() {
         Node<T> temp = head;
         while (temp != null) {
